@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script defer src='select-wrapper.js'></script>
+</head>
+
+<body onload="init()">
+
+    <label for="cars">Choose a car:</label>
+    <select-wrapper id="wrapperi">
+        <select name="cars" id="cars">
+        </select>
+    </select-wrapper>
+
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+
+    <script>
+
+        function init() {
+            let wrapperi = document.getElementById('wrapperi');
+            wrapperi.options = [{ value: 0, name: "nolla" }, { value: 1, name: "yksi" }, { value: 2, name: "kaksi" }, { value: 3, name: "kolme" }, { value: 4, name: "neljä" }, { value: 5, name: "viisi" }, { value: 6, name: "kuusi" }, { value: 7, name: "seitsemän" }, { value: 8, name: "kahdeksan" }, { value: 9, name: "yhdeksän" }, { value: 10, name: "kymmenen" }, { value: 11, name: "yksitoista" }, { value: 12, name: "kaksitoista" }, { value: 13, name: "kolmetoista" }, { value: 14, name: "neljätoista" }, { value: 15, name: "viisitoista" }];
+        }
+
+        function prev() {
+            let wrapperi = document.getElementById('wrapperi');
+            wrapperi.prevPage();
+        }
+        function next() {
+            let wrapperi = document.getElementById('wrapperi');
+            wrapperi.nextPage();
+        }        
+    </script>
+
+</body>
+
+</html>
